@@ -1,10 +1,3 @@
-/* ============================================================
-   Peon "Work work" easter egg.
-   Trigger: the Konami code (up up down down left right left right B A)
-   or type one of: workwork / zugzug / peon.  Click or ESC to close.
-   The flashy styles are scoped to #peon-egg so they never touch the
-   clean site theme.
-   ============================================================ */
 (function () {
   var css = ''
     + '#peon-egg{position:fixed;inset:0;z-index:99999;display:none;'
@@ -47,11 +40,11 @@
   var egg = document.createElement('div');
   egg.id = 'peon-egg';
   egg.innerHTML =
-      '<div class="egg-marquee"><span>&#9733; Zug zug! &#9733; Ready to work! &#9733; Something need doing? &#9733; Work work! &#9733; Me not that kind of orc! &#9733;</span></div>'
+      '<div class="egg-marquee"><span>&#9733; zug zug! &#9733; ready to work! &#9733; something need doing? &#9733; work work &#9733; me not that kind of orc &#9733;</span></div>'
     + '<img alt="Peon" data-src="' + peon + '" onerror="this.onerror=null;this.src=\'' + fallback + '\'">'
     + '<h1 class="egg-title">WORK WORK</h1>'
     + '<div class="egg-blink">&#9654; click anywhere / press ESC to get back to work &#9668;</div>'
-    + '<div class="egg-hint">you found the easter egg</div>';
+    + '<div class="egg-hint">We are all peons.</div>';
 
   function mount() { document.body.appendChild(egg); }
   if (document.body) mount(); else document.addEventListener('DOMContentLoaded', mount);
